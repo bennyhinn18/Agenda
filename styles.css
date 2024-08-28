@@ -16,7 +16,7 @@ body {
 .header {
     text-align: center;
     padding-bottom: 20px;
-    border-bottom: 2px solid #0072bc;
+    border-bottom: 2px solid #004165;
     display: flex;
     
     
@@ -30,12 +30,12 @@ body {
 
 .header h1 {
     font-size: 2em;
-    color: #5c1301;
+    color: #772432;
 }
 
 .header h2 {
     font-size: 1.5em;
-    color: #0072bc;
+    color: #004165;
 }
 
 .header p {
@@ -50,12 +50,12 @@ body {
 
 .meeting-details h3 {
     font-size: 1.2em;
-    color: #5c1301;
+    color: #772432;
 }
 
 .meeting-details span {
     font-weight: bold;
-    color: #0072bc;
+    color: #004165;
 }
 
 .agenda {
@@ -64,7 +64,7 @@ body {
 
 .agenda h3 {
     font-size: 1.5em;
-    color: #5c1301;
+    color: #772432;
     margin-bottom: 10px;
 }
 
@@ -80,7 +80,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #0072bc;
+    background-color: #004165;
     color: white;
 }
 
@@ -104,7 +104,7 @@ ul li {
 .footer {
     text-align: center;
     padding-top: 20px;
-    border-top: 2px solid #0072bc;
+    border-top: 2px solid #004165;
     margin-top: 20px;
 }
 
