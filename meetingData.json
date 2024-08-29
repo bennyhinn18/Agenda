@@ -3,33 +3,36 @@
         "51": {
             "themeOfTheDay": "You can if you think you can",
             "wordOfTheDay": "Elated",
-            "tmod": "John Doe",
-            "ttMaster": "Jane Smith",
-            "ge": "Michael Brown",
-            "ahCounter": "Alice Johnson",
-            "timer": "Bob White",
-            "grammarian": "Carol Black",
+            "tmod": "Vishal",
+            "ttMaster": "Sameera",
+            "ge": "Abinesh",
+            "ahCounter": "Ashwathi",
+            "timer": "Rosmi",
+            "grammarian": "Falin",
             "speakers": [
-                {"name": "Alan Lee", "level": "Level 3, Project 1", "evaluator": "Susan Green"},
-                {"name": "Brian Kim", "level": "Level 2, Project 2", "evaluator": "David Blue"},
-                {"name": "Brian Kim", "level": "Level 2, Project 2", "evaluator": "David Blue"},
-                {"name": "Brian Kim", "level": "Level 2, Project 2", "evaluator": "David Blue"},
-                
-                {"name": "Cathy Park", "level": "Level 1, Project 3", "evaluator": "Emma Red"}
+                {"name": "Jervin Revaldo", "level": "Level 3, Project 3", "evaluator": "Maxwell Rubert"},
+                {"name": "Shaniya Sr", "level": "Level 3, Project 3", "evaluator": "Aswathi"},
+                {"name": "Mohammad Ashif", "level": "Level 1, Project 4", "evaluator": "Bennyhinn"},
+                {"name": "Ananshi", "level": "Level 1, Project 2", "evaluator": "Marsha Grasis"},
+                {"name": "Sabin", "level": "Level 2, Project 3", "evaluator": "Babisha"},
+                {"name": "Tinusha Steni", "level": "Level 1, Project 2", "evaluator": "Shaniya Jr"}
             ],
             "tt-speakers": [
-                {"name": "Alan Lee"},
-                {"name": "Brian Kim"},
-                {"name": "Brian Kim"},
-                {"name": "Brian Kim"},
-                {"name": "Brian Kim"},
-                {"name": "Cathy Park"}
+                {"name": "Suman"},
+                {"name": "Manusha"},
+                {"name": "Authava"},
+                {"name": "Blessy Jonisha"},
+                {"name": "Bennyhinn"},
+                {"name": "Marsha Grasis"},
+                {"name": "Jisho"}
             ],
             "rr-speakers": [
-                {"name": "Alan Lee"},
-                {"name": "Brian Kim"},
-                {"name": "Brian Kim"},
-                {"name": "Brian Kim"}
+                {"name": "Ashva Rishenth"},
+                {"name": "Ageera"},
+                {"name": "Hamdhan Hussain"},
+                {"name": "Jejashini"},
+                {"name": "Sri Venkateshwaran"},
+                {"name": "Babisha"}
                 
             ]
 
