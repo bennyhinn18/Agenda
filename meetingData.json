@@ -1,0 +1,39 @@
+{
+    "meetings": {
+        "51": {
+            "themeOfTheDay": "You can if you think you can",
+            "wordOfTheDay": "Elated",
+            "tmod": "John Doe",
+            "ttMaster": "Jane Smith",
+            "ge": "Michael Brown",
+            "ahCounter": "Alice Johnson",
+            "timer": "Bob White",
+            "grammarian": "Carol Black",
+            "speakers": [
+                {"name": "Alan Lee", "level": "Level 3, Project 1", "evaluator": "Susan Green"},
+                {"name": "Brian Kim", "level": "Level 2, Project 2", "evaluator": "David Blue"},
+                {"name": "Brian Kim", "level": "Level 2, Project 2", "evaluator": "David Blue"},
+                {"name": "Brian Kim", "level": "Level 2, Project 2", "evaluator": "David Blue"},
+                
+                {"name": "Cathy Park", "level": "Level 1, Project 3", "evaluator": "Emma Red"}
+            ],
+            "tt-speakers": [
+                {"name": "Alan Lee"},
+                {"name": "Brian Kim"},
+                {"name": "Brian Kim"},
+                {"name": "Brian Kim"},
+                {"name": "Brian Kim"},
+                {"name": "Cathy Park"}
+            ],
+            "rr-speakers": [
+                {"name": "Alan Lee"},
+                {"name": "Brian Kim"},
+                {"name": "Brian Kim"},
+                {"name": "Brian Kim"}
+                
+            ]
+
+        }
+     
+}
+}

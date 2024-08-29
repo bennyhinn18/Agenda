@@ -1,0 +1,46 @@
+
+<section class="tt-speakers">
+    <h3>Table Topics Speakers</h3>
+    <ul id="tt-speakers-list"></ul>
+</section>
+<section class="rr-speakers">
+    <h3>Round Robin Speakers</h3>
+    <ul id="rr-speakers-list"></ul>
+</section>
+
+<script>
+        // Function to get the meeting number from the URL
+    function getMeetingNumberFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('meeting') || '51'; // Default to meeting 51 if not specified
+    }
+    
+    const currentMeetingNumber = getMeetingNumberFromURL();
+    
+    fetch('meetingData.json')
+        .then(response => response.json())
+        .then(data => {
+            const meetingData = data.meetings[currentMeetingNumber];
+    
+            if (meetingData) {
+                const ttSpeakersList = document.getElementById('tt-speakers-list');
+                ttSpeakersList.innerHTML = ''; // Clear any existing content
+                meetingData['tt-speakers'].forEach(speaker => {
+                    const li = document.createElement('li');
+                    li.textContent = speaker.name;
+                    ttSpeakersList.appendChild(li);
+                });
+    
+                const rrSpeakersList = document.getElementById('rr-speakers-list');
+                rrSpeakersList.innerHTML = ''; // Clear any existing content
+                meetingData['rr-speakers'].forEach(speaker => {
+                    const li = document.createElement('li');
+                    li.textContent = speaker.name;
+                    rrSpeakersList.appendChild(li);
+                });
+            } else {
+                console.error('Meeting data not found for meeting number:', currentMeetingNumber);
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>

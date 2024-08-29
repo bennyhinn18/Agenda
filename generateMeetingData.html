@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Meeting Data</title>
+</head>
+<body>
+    <h1>Generate Meeting Data for Next Meeting</h1>
+    <form id="meetingDataForm">
+        <label for="themeOfTheDay">Theme of the Day:</label>
+        <input type="text" id="themeOfTheDay" name="themeOfTheDay" required><br><br>
+
+        <label for="wordOfTheDay">Word of the Day:</label>
+        <input type="text" id="wordOfTheDay" name="wordOfTheDay" required><br><br>
+
+        <label for="tmod">Toastmaster of the Day:</label>
+        <input type="text" id="tmod" name="tmod" required><br><br>
+
+        <label for="ttMaster">Table Topics Master:</label>
+        <input type="text" id="ttMaster" name="ttMaster" required><br><br>
+
+        <label for="ge">General Evaluator:</label>
+        <input type="text" id="ge" name="ge" required><br><br>
+
+        <label for="ahCounter">Ah Counter:</label>
+        <input type="text" id="ahCounter" name="ahCounter" required><br><br>
+
+        <label for="timer">Timer:</label>
+        <input type="text" id="timer" name="timer" required><br><br>
+
+        <label for="grammarian">Grammarian:</label>
+        <input type="text" id="grammarian" name="grammarian" required><br><br>
+
+        <label for="ttSpeakers">Table Topics Speakers (comma-separated):</label>
+        <input type="text" id="ttSpeakers" name="ttSpeakers" required><br><br>
+
+        <label for="rrSpeakers">Round Robin Speakers (comma-separated):</label>
+        <input type="text" id="rrSpeakers" name="rrSpeakers" required><br><br>
+
+        <button type="submit">Generate Meeting Data</button>
+    </form>
+
+    <h2>Generated Meeting Data</h2>
+    <pre id="output"></pre>
+
+    <script src="generateMeetingData.js"></script>
+</body>
+</html>

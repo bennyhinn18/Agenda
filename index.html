@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toastmasters Meeting Agenda</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <img src="https://www.toastmasters.org//content/images/globals/toastmasters-logo@2x.png" alt="Toastmasters Logo">
+            <img src="https://www.toastmasters.org/content/images/globals/toastmasters-logo@2x.png" alt="Toastmasters Logo">
             <div>
                 <h1>Stella Mary’s Toastmasters</h1>
                 <p>District 120,Region 13,Division I,Area 2</p>
@@ -17,16 +18,20 @@
         </header>
 
         <section class="meeting-details">
-            <h3>Theme of the Day: <span contenteditable="true">Innovation in Leadership</span></h3>
-            <h3>Word of the Day: <span contenteditable="true">Elated</span></h3>
+            <h3>Theme of the Day: <span id="theme-of-the-day" contenteditable="true"></span></h3>
+            <h3>Word of the Day: <span id="word-of-the-day" contenteditable="true"></span></h3>
         </section>
         <section class="role-players">
             <h3>Role Players</h3>
             <ul>
                 
-                <li><strong>Toastmaster of the Day (TMOD):</strong> Michael Brown</li>
-                <li><strong>Table Topics Master:</strong> Sarah Lee</li>
-                <li><strong>General Evaluator:</strong> David Black</li>
+                <li><strong>Toastmaster of the Day (TMOD):</strong> <span id="tmod"></span></li>
+                <li><strong>Table Topics Master:</strong> <span id="tt-master"></span></li>
+                <li><strong>General Evaluator:</strong><span id="ge"></li>
+                <li><strong>TAG team:</strong> <br></li>
+                <i>
+                    <li style="padding-left: 2em; font-weight: 10;"> <strong>Timer :</strong> <span id="timer"></span><strong>     AH counter:</strong> <span id="ah-counter"> </span><strong> Grammarian:</strong> <span id="grammarian"></span></li>
+                </i>
             </ul>
         </section>
 
@@ -47,10 +52,10 @@
                     <td>6:32 PM</td>
                     <td>President</td>
                     <td>Welcome and Introductions</td>
-                </tr>
+                </tr><script src="scripts.js" defer></script>
                 <tr>
                     <td>6:35 PM</td>
-                    <td>Toastmaster</td>
+                    <td>Toastmaster of the Day</td>
                     <td>Introduce Meeting Theme and Agenda</td>
                 </tr>
                 <tr>
@@ -62,34 +67,11 @@
                     <td>7:00 PM</td>
                     <td>Prepared Speakers</td>
                     <td>
-                        <ul>
-                            <li>
-                                <strong>Speaker 1:</strong> John Doe (Level 1, Project 2) <br>
-                                <strong>Evaluator:</strong> Jane Smith
-                            </li>
-                            <li>
-                                <strong>Speaker 2:</strong> Mary Johnson (Level 2, Project 1) <br>
-                                <strong>Evaluator:</strong> Bob Brown
-                            </li>
-                            <li>
-                                <strong>Speaker 3:</strong> Alan Lee (Level 3, Project 1) <br>
-                                <strong>Evaluator:</strong> Susan Green
-                            </li>
-                            <li>
-                                <strong>Speaker 4:</strong> Alan Lee (Level 3, Project 1) <br>
-                                <strong>Evaluator:</strong> Susan Green
-                            </li>
-                            <li>
-                                <strong>Speaker 5:</strong> Alan Lee (Level 3, Project 1) <br>
-                                <strong>Evaluator:</strong> Susan Green
-                            </li>
-                            <li>
-                                <strong>Speaker 6:</strong> Alan Lee (Level 3, Project 1) <br>
-                                <strong>Evaluator:</strong> Susan Green
-                            </li>
+                        <ul id="speakers-list">
+                            
                         </ul>
                     </td>
-                </tr>
+                </tr>scripts.js:52  Error fetching data: TypeError: Cannot set properties of null (setting 'innerHTML')
                 <tr>
                     <td>7:30 PM</td>
                     <td>General Evaluator</td>
@@ -102,11 +84,26 @@
                 </tr>
             </table>
         </section>
-
-        <footer class="footer">
-            <p>&copy; 2024 Stella Mary’s Toastmasters. All rights reserved.</p>
-        </footer>
+        
+                               <footer class="footer">
+                    <a class="a" href="">other-speakers</a>
+                    <script>
+                        // Function to get the meeting number from the URL
+                        function getMeetingNumberFromURL() {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            return urlParams.get('meeting') || '51'; // Default to meeting 51 if not specified
+                        }
+                
+                        const meeting = getMeetingNumberFromURL();
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const otherSpeakersLink = document.querySelector('.footer .a');
+                            otherSpeakersLink.href = `other-speakers.html?meeting=${meeting}`;
+                        });
+                    </script>
+                    <p>&copy; 2024 Stella Mary’s Toastmasters. All rights reserved.</p>
+                </footer>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
 
