@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toastmasters Meeting Agenda</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="icon" href="https://www.toastmasters.org/content/images/globals/toastmasters-logo@2x.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -18,8 +18,9 @@
         </header>
 
         <section class="meeting-details">
-            <h3>Theme of the Day: <span id="theme-of-the-day" contenteditable="true"></span></h3>
-            <h3>Word of the Day: <span id="word-of-the-day" contenteditable="true"></span></h3>
+            <p>Meeting No: <span id="meeting-no"></span>   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Date: <span id="meeting-date"></span></p>
+            <h3>Theme of the Day:<span id="theme-of-the-day" contenteditable="true" ></span></h3>
+            <h3>Word of the Day: <span id="word-of-the-day" onclick="updateLink()" ></span></h3>
         </section>
         <section class="role-players">
             <h3>Role Players</h3>
@@ -36,6 +37,7 @@
         </section>
 
         <section class="agenda">
+
             <h3>Agenda</h3>
             <table>
                 <tr>
@@ -62,7 +64,7 @@
                     <td>1:55 PM</td>
                     <td>General Evaluator</td>
                     <td>Introduce TAG Team</td>
-                </tr><script src="scripts.js" defer></script>
+                </tr>
                 
                 
                 
@@ -99,7 +101,9 @@
         </section>
         
                                <footer class="footer">
-                    <a class="a" href="">other-speakers</a>
+                    
+                               <a class="a" href="">other-speakers</a>
+                             <!--    <button onclick="printAgenda()">Print Agenda</button>-->
                     <script>
                         // Function to get the meeting number from the URL
                         function getMeetingNumberFromURL() {
