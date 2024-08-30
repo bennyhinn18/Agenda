@@ -20,7 +20,8 @@ fetch('meetingData.json')
             document.getElementById('ah-counter').textContent = meetingData.ahCounter;
             document.getElementById('timer').textContent = meetingData.timer;
             document.getElementById('grammarian').textContent = meetingData.grammarian;
-
+            document.getElementById('meeting-no').textContent="#"+currentMeetingNumber;
+            document.getElementById('meeting-date').textContent=meetingData.date
             const speakersList = document.getElementById('speakers-list');
             speakersList.innerHTML = ''; // Clear any existing content
             meetingData.speakers.forEach(speaker => {
@@ -50,3 +51,29 @@ fetch('meetingData.json')
         }
     })
     .catch(error => console.error('Error fetching data:', error));
+
+
+/*
+    function printAgenda() {
+        const meetingNo = document.getElementById('meeting-no').innerText;
+        const meetingDate = document.getElementById('meeting-date').innerText;
+        const agendaContent = document.querySelector('.agenda').innerHTML;
+        
+        const printWindow = window.open('', '', 'height=600,width=800');
+        printWindow.document.write('<html><head><title>Print Agenda</title>');
+        printWindow.document.write('</head><body >');
+        printWindow.document.write('<h3>Agenda</h3>');
+        printWindow.document.write('<p>Meeting No: ' + meetingNo + '</p>');
+        printWindow.document.write('<p>Date: ' + meetingDate + '</p>');
+        printWindow.document.write(agendaContent);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+*/
+
+    function updateLink() {
+        const themeOfTheDay = document.getElementById('word-of-the-day').innerText;
+        const searchUrl = 'https://www.google.com/search?pglt=675&q=' + encodeURIComponent(themeOfTheDay);
+        window.open(searchUrl, '_blank');
+    }
