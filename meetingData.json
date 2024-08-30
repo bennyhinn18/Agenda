@@ -1,39 +1,42 @@
 {
     "meetings": {
         "51": {
-            "date":"2-09-2024",
+            "date":"02-09-2024",
             "themeOfTheDay": "You can if you think you can",
             "wordOfTheDay": "Effervescent",
-            "tmod": "Vishal",
-            "ttMaster": "Sameera",
-            "ge": "Abinesh",
-            "ahCounter": "Ashwathi",
-            "timer": "Rosmi",
-            "grammarian": "Falin",
+            "tmod": " TM Vishal",
+            "ttMaster": "TM Sameera",
+            "ge": " TM Abinesh",
+            "ahCounter": "TM Ashwathi",
+            "timer": "TM Rosmi",
+            "grammarian": "TM Sando Falin",
             "speakers": [
-                {"name": "Jervin Revaldo", "level": "Level 3, Project 3", "evaluator": "Maxwell Rubert"},
-                {"name": "Ashva Rishenth", "level": "Level 1, Project 4", "evaluator": "Aswathi"},
-                {"name": "Mohammad Ashif", "level": "Level 1, Project 4", "evaluator": "Bennyhinn"},
-                {"name": "Ananshi", "level": "Level 1, Project 2", "evaluator": "Marsha Grasis"},
-                {"name": "Sabin", "level": "Level 2, Project 3", "evaluator": "Babisha"},
-                {"name": "Tinusha Steni", "level": "Level 1, Project 2", "evaluator": "Shaniya Jr"}
+                {"name": "TM Jervin Revaldo", "level": "Level 3, Project 3", "evaluator": "TM Ashva Rishenth"},
+                {"name": "TM Ashva Rishenth", "level": "Level 1, Project 4", "evaluator": "TM Aswathi"},
+                {"name": "TM Mohammad Ashif", "level": "Level 1, Project 4", "evaluator": "TM Bennyhinn"},
+                {"name": "TM Ananshi", "level": "Level 1, Project 2", "evaluator": "TM Marsha Grasis"},
+                {"name": "TM Sabin", "level": "Level 2, Project 3", "evaluator": "TM Babisha"},
+                {"name": "TM Tinusha Steni", "level": "Level 1, Project 2", "evaluator": "TM Shaniya Jr"}
             ],
             "tt-speakers": [
-                {"name": "Suman"},
-                {"name": "Manusha"},
-                {"name": "Authava"},
-                {"name": "Blessy Jonisha"},
-                {"name": "Bennyhinn"},
-                {"name": "Marsha Grasis"},
-                {"name": "Jisho"}
+                {"name": "TM Suman"},
+                {"name": "TM Manusha"},
+                {"name": "TM Authava"},
+                {"name": "TM Blessy Jonisha"},
+                {"name": "TM Bennyhinn"},
+                {"name": "TM Marsha Grasis"},
+                {"name": "TM Jisho"}
             ],
             "rr-speakers": [
                 
-                {"name": "Ageera"},
-                {"name": "Hamdhan Hussain"},
-                {"name": "Jejashini"},
-                {"name": "Sri Venkateshwaran"},
-                {"name": "Babisha"}
+                {"name": "TM Ageera"},
+                {"name": "TM Hamdhan Hussain"},
+                {"name": "TM Jejashini"},
+                {"name": "TM Sri Venkateshwaran"},
+                {"name": "TM Babisha"}
+                {"name": "TM Sriharshini"},
+                {"name": "TM Ajisha"},
+                {"name": "TM Jenisha"}
                 
             ]
 
