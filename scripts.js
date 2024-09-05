@@ -1,7 +1,7 @@
 // Function to get the meeting number from the URL
 function getMeetingNumberFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('meeting') || '51'; // Default to meeting 51 if not specified
+    return urlParams.get('meeting') || '52'; // Default to meeting 51 if not specified
 }
 
 const currentMeetingNumber = getMeetingNumberFromURL();

@@ -40,6 +40,45 @@
                 
             ]
 
+        },
+        "52": {
+            "date":"09-09-2024",
+            "themeOfTheDay": "Slow Down and Enjoy Life",
+            "wordOfTheDay": "Endorse",
+            "tmod": " TM Ashwathi ",
+            "ttMaster": "TM Hamdhan Hussain",
+            "ge": " TM Maxwell Rubert",
+            "ahCounter": "TM Ageera",
+            "timer": "TM Marsha Grasis",
+            "grammarian": "TM Babisha",
+            "speakers": [
+                {"name": "TM Abinesh", "level": "Level 3, Project 3", "evaluator": "TM Ashva Rishenth"},
+                {"name": "TM Shaniya Jr", "level": "Level 2, Project 1", "evaluator": "TM Moun Sando Falin"},
+                {"name": "TM Suman", "level": "Level 2, Project 3", "evaluator": "TM Mohammad Ashif"},
+                {"name": "TM Jejashini", "level": "Level 1, Project 4", "evaluator": "TM Sameera"},
+                {"name": "TM Sri Venkateshwaran", "level": "Level 1, Project 3", "evaluator": "TM Vishal"},
+                {"name": "TM Shaniya Sr", "level": "Level 3, Project 3", "evaluator": "TM Jervin Revaldo"}
+            ],
+            "tt-speakers": [
+                {"name": "TM Suman"},
+                {"name": "TM Manusha"},
+                {"name": "TM Authava"},
+                {"name": "TM Blessy Jonisha"},
+                {"name": "TM Sriharshini"},
+                {"name": "TM Marsha Grasis"},
+                {"name": "TM Jisho"}
+            ],
+            "rr-speakers": [
+                
+                {"name": "TM Ageera"},
+                {"name": "TM Hamdhan Hussain"},
+                {"name":"TM Bennyhinn"},
+                {"name": "TM Babisha"},
+                {"name": "TM Ajisha"},
+                {"name": "TM Jenisha"}
+                
+            ]
+
         }
      
 }
