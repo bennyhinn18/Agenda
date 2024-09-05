@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toastmasters Meeting Agenda Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .meeting-info, .speeches-section, .table-topics, .roles { margin-bottom: 20px; }
+    .section-header { font-size: 20px; margin-bottom: 10px; }
+    .input-field { margin-bottom: 10px; }
+    button { margin-top: 10px; }
+    select { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Toastmasters Meeting Agenda Generator</h1>
+  
+  <div class="meeting-info">
+    <div class="section-header">Meeting Information</div>
+    <div class="input-field">
+      <label for="meeting-date">Date:</label>
+      <input type="date" id="meeting-date">
+    </div>
+    <div class="input-field">
+      <label for="themeOfTheDay">Theme of the Day:</label>
+      <input type="text" id="themeOfTheDay">
+    </div>
+    <div class="input-field">
+      <label for="wordOfTheDay">Word of the Day:</label>
+      <input type="text" id="wordOfTheDay">
+    </div>
+    
+  </div>
+
+  <div class="roles">
+    <div class="section-header">Assign Roles</div>
+    <div class="input-field">
+      <label for="tmod">Toastmaster of the Day (TMOD):</label>
+      <select id="tmod" class="member-dropdown"></select>
+    </div>
+    <div class="input-field">
+        <label for="ge">General Evaluator:</label>
+        <select id="ge" class="member-dropdown"></select>
+      </div>
+    <div class="input-field">
+        <label for="timer">Timer:</label>
+        <select id="timer" class="member-dropdown"></select>
+      </div>
+      <div class="input-field">
+        <label for="ahCounter">Ah Counter:</label>
+        <select id="ahCounter" class="member-dropdown"></select>
+      </div>
+      <div class="input-field">
+        <label for="grammarian">Grammarian:</label>
+        <select id="grammarian" class="member-dropdown"></select>
+      </div>
+      <div class="input-field">
+        <label for="ttMaster">Table Topics Master:</label>
+        <select id="ttMaster" class="member-dropdown"></select>
+      </div>
+    <!-- Add other roles here (Timer, Ah-Counter, etc.) similarly -->
+  </div>
+
+  <div class="speeches-section">
+    <div class="section-header">Prepared Speeches</div>
+    <button id="add-speaker">Add Speaker</button>
+    <div id="speeches-list"></div>
+  </div>
+
+  <button id="generate-json">Generate JSON</button>
+  <pre id="json-output"></pre>
+
+  <script>
+    let members = [];
+    let selectedMembers = new Set();
+    const speechesList = document.getElementById('speeches-list');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load members from members.json
+      fetch('members.json')
+        .then(response => response.json())
+        .then(data => {
+          members = data;
+          populateDropdowns();
+        });
+
+      fetch('meetingData.json')
+        .then(response => response.json())
+        .then(data => {
+          const meetings = data.meetings;
+          const highestMeetingNumber = Math.max(...Object.keys(meetings).map(Number));
+          const meetingDetails = meetings[highestMeetingNumber];
+
+          if (meetingDetails) {
+            const themeOfTheDay = meetingDetails.themeOfTheDay;
+            const wordOfTheDay = meetingDetails.wordOfTheDay;
+            const tmod = meetingDetails.tmod;
+            const date = meetingDetails.date;
+
+            document.getElementById('meeting-date').value = date;
+            document.getElementById('themeOfTheDay').value = themeOfTheDay;
+            document.getElementById('wordOfTheDay').value = wordOfTheDay;
+          }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+      document.getElementById('add-speaker').addEventListener('click', addSpeaker);
+      document.getElementById('generate-json').addEventListener('click', generateJSON);
+    });
+
+    function populateDropdowns() {
+      const memberDropdowns = document.querySelectorAll('.member-dropdown');
+      memberDropdowns.forEach(dropdown => {
+        // Clear existing options
+        dropdown.innerHTML = '<option value="" disabled selected>Select Member</option>';
+        members.forEach(member => {
+          const option = document.createElement('option');
+          option.value = member.name;
+          option.textContent = member.name;
+          dropdown.appendChild(option);
+        });
+      });
+    }
+
+    function addSpeaker() {
+      const speakerDiv = document.createElement('div');
+      speakerDiv.classList.add('input-field');
+
+      // Name dropdown
+      const nameDropdown = document.createElement('select');
+      nameDropdown.classList.add('member-dropdown', 'speaker-name');
+      nameDropdown.innerHTML = '<option value="" disabled selected>Select Speaker</option>';
+      populateMemberDropdown(nameDropdown);
+
+      // Handle selection change
+      nameDropdown.addEventListener('change', function() {
+        const previousValue = this.dataset.previousValue;
+
+        if (previousValue) {
+          selectedMembers.delete(previousValue);
+        }
+        
+        selectedMembers.add(this.value);
+        this.dataset.previousValue = this.value;  // Store selected value for future reference
+
+        updateAllDropdowns();
+      });
+
+      // Level dropdown
+      const levelDropdown = document.createElement('select');
+      levelDropdown.innerHTML = `
+        <option value="" disabled selected>Select Level</option>
+        <option value="Level 1">Level 1</option>
+        <option value="Level 2">Level 2</option>
+        <option value="Level 3">Level 3</option>
+        <option value="Level 4">Level 4</option>
+        <option value="Level 5">Level 5</option>
+      `;
+      levelDropdown.classList.add('level-dropdown');
+
+      // Project dropdown
+      const projectDropdown = document.createElement('select');
+      projectDropdown.innerHTML = `
+        <option value="" disabled selected>Select Project</option>
+        <option value="Project 1">Project 1</option>
+        <option value="Project 2">Project 2</option>
+        <option value="Project 3">Project 3</option>
+        <option value="Project 4">Project 4</option>
+        <option value="Project 5">Project 5</option>
+      `;
+      projectDropdown.classList.add('project-dropdown');
+
+      // Evaluator dropdown
+      const evaluatorDropdown = document.createElement('select');
+      evaluatorDropdown.classList.add('member-dropdown', 'evaluator-name');
+      evaluatorDropdown.innerHTML = '<option value="" disabled selected>Select Evaluator</option>';
+      populateMemberDropdown(evaluatorDropdown);
+
+      evaluatorDropdown.addEventListener('change', function() {
+        const previousValue = this.dataset.previousValue;
+
+        if (previousValue) {
+          selectedMembers.delete(previousValue);
+        }
+        
+        selectedMembers.add(this.value);
+        this.dataset.previousValue = this.value;
+
+        updateAllDropdowns();
+      });
+
+      // Append to speeches list
+      speakerDiv.appendChild(nameDropdown);
+      speakerDiv.appendChild(levelDropdown);
+      speakerDiv.appendChild(projectDropdown);
+      speakerDiv.appendChild(evaluatorDropdown);
+      speechesList.appendChild(speakerDiv);
+    }
+
+    function populateMemberDropdown(dropdown) {
+      const selectedValue = dropdown.value;
+      dropdown.innerHTML = '<option value="" disabled selected>Select Member</option>';
+
+      members.forEach(member => {
+        if (!selectedMembers.has(member.name) || member.name === selectedValue) {
+          const option = document.createElement('option');
+          option.value = member.name;
+          option.textContent = member.name;
+          dropdown.appendChild(option);
+        }
+      });
+
+      dropdown.value = selectedValue;  // Keep the previously selected value
+    }
+
+    function updateAllDropdowns() {
+      const allDropdowns = document.querySelectorAll('.member-dropdown');
+      allDropdowns.forEach(dropdown => {
+        const selectedValue = dropdown.value;
+        populateMemberDropdown(dropdown);
+        dropdown.value = selectedValue;
+      });
+    }
+
+    function generateJSON() {
+      const meetingData = {
+        date: document.getElementById('meeting-date').value,
+        themeOfTheDay: document.getElementById('themeOfTheDay').value,
+        wordOfTheDay: document.getElementById('wordOfTheDay').value,
+        tmod: document.getElementById('tmod').value,
+        ge: document.getElementById('ge').value,
+        timer:document.getElementById('timer').value,
+        ahCounter:document.getElementById('ahCounter').value,
+        grammarian:document.getElementById('grammarian').value,
+        ttMaster:document.getElementById('ttMaster').value,
+        speakers: []
+      };
+
+      // Add speeches
+      const speechDivs = speechesList.querySelectorAll('.input-field');
+      speechDivs.forEach(div => {
+        const speakerName = div.querySelector('.speaker-name').value;
+        const level = div.querySelector('.level-dropdown').value;
+        const project = div.querySelector('.project-dropdown').value;
+        const evaluatorName = div.querySelector('.evaluator-name').value;
+
+        meetingData.speakers.push({
+          name: speakerName,
+          level: `${level}, ${project}`,
+          evaluator: evaluatorName
+        });
+      });
+
+      document.getElementById('json-output').textContent = JSON.stringify(meetingData, null, 2);
+    }
+  </script>
+</body>
+</html>
