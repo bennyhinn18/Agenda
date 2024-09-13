@@ -1,7 +1,7 @@
 // Function to get the meeting number from the URL
 function getMeetingNumberFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('meeting') || '52'; // Default to meeting 51 if not specified
+    return urlParams.get('meeting') || '53'; // Default to meeting 51 if not specified
 }
 
 const currentMeetingNumber = getMeetingNumberFromURL();
@@ -24,9 +24,9 @@ fetch('meetingData.json')
             document.getElementById('meeting-date').textContent=meetingData.date
             const speakersList = document.getElementById('speakers-list');
             speakersList.innerHTML = ''; // Clear any existing content
-            meetingData.speakers.forEach(speaker => {
+            meetingData.speakers.forEach((speaker,index) => {
                 const li = document.createElement('li');
-                li.innerHTML = `<strong>Speaker:</strong> ${speaker.name} (${speaker.level}) <br>
+                li.innerHTML = `<strong>Speaker ${index + 1}:</strong> ${speaker.name} (${speaker.level}) <br>
                                 <strong>Evaluator:</strong> ${speaker.evaluator}`;
                 speakersList.appendChild(li);
             });
@@ -77,3 +77,11 @@ fetch('meetingData.json')
         const searchUrl = 'https://www.google.com/search?pglt=675&q=' + encodeURIComponent(themeOfTheDay);
         window.open(searchUrl, '_blank');
     }
+     // Function to get the meeting number from the URL
+     
+
+    const meeting = getMeetingNumberFromURL();
+    document.addEventListener('DOMContentLoaded', () => {
+        const otherSpeakersLink = document.querySelector('.footer .a');
+        otherSpeakersLink.href = `other-speakers.html?meeting=${meeting}`;
+    });

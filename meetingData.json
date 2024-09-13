@@ -79,7 +79,55 @@
                 
             ]
 
-        }
+        },
+        "53":{
+            "date": "2024-09-16",
+            "themeOfTheDay": "Engineers Day",
+            "wordOfTheDay": "Ebullience",
+            "tmod": "TM Moun Sando Falin",
+            "ge": "TM Ananshi",
+            "timer": "TM Bennyhinn Sam",
+            "ahCounter": "TM Maxwell Rubert",
+            "grammarian": "TM Vishal",
+            "ttMaster": "TM Infance Tony",
+            "speakers": [
+              {
+                "name": "TM Shalom Nishan",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Authava"
+              },
+              {
+                "name": "TM Ajisha",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Blessy Jonisha"
+              },
+              {
+                "name": "TM Jisho",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Tinusha Steni Berg"
+              },
+              {
+                "name": "TM Sriharshini",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Shaniya Jr"
+              },
+              {
+                "name": "TM Dhibisha",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Jejashini"
+              },
+              {
+                "name": "TM Jenisha",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Babisha"
+              },
+              {
+                "name": "TM Monika",
+                "level": "Level 1, Project 1",
+                "evaluator": "TM Manusha"
+              }
+            ]
+          }
      
 }
 }

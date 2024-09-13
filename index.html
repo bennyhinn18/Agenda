@@ -103,21 +103,6 @@
                                <footer class="footer">
                     <a class="a" href="" style="background-color: #004165; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Other Speakers</a>
                     
-                             <!--  <a class="a" href="">other-speakers</a> -->
-                             <!--    <button onclick="printAgenda()">Print Agenda</button>-->
-                    <script>
-                        // Function to get the meeting number from the URL
-                        function getMeetingNumberFromURL() {
-                            const urlParams = new URLSearchParams(window.location.search);
-                            return urlParams.get('meeting') || '51'; // Default to meeting 51 if not specified
-                        }
-                
-                        const meeting = getMeetingNumberFromURL();
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const otherSpeakersLink = document.querySelector('.footer .a');
-                            otherSpeakersLink.href = `other-speakers.html?meeting=${meeting}`;
-                        });
-                    </script>
                     <p>&copy; 2024 Stella Mary’s Toastmasters. All rights reserved.</p>
                 </footer>
     </div>

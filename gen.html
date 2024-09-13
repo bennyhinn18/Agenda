@@ -224,15 +224,15 @@
 
     function generateJSON() {
       const meetingData = {
-        date: document.getElementById('meeting-date').value,
+        date:document.getElementById('meeting-date').value,
         themeOfTheDay: document.getElementById('themeOfTheDay').value,
         wordOfTheDay: document.getElementById('wordOfTheDay').value,
-        tmod: document.getElementById('tmod').value,
-        ge: document.getElementById('ge').value,
-        timer:document.getElementById('timer').value,
-        ahCounter:document.getElementById('ahCounter').value,
-        grammarian:document.getElementById('grammarian').value,
-        ttMaster:document.getElementById('ttMaster').value,
+        tmod:'TM '+  document.getElementById('tmod').value,
+        ge:'TM '+  document.getElementById('ge').value,
+        timer:'TM '+ document.getElementById('timer').value,
+        ahCounter:'TM '+ document.getElementById('ahCounter').value,
+        grammarian:'TM '+ document.getElementById('grammarian').value,
+        ttMaster:'TM '+ document.getElementById('ttMaster').value,
         speakers: []
       };
 
@@ -245,9 +245,9 @@
         const evaluatorName = div.querySelector('.evaluator-name').value;
 
         meetingData.speakers.push({
-          name: speakerName,
+          name:'TM '+speakerName,
           level: `${level}, ${project}`,
-          evaluator: evaluatorName
+          evaluator:'TM '+evaluatorName
         });
       });
 
