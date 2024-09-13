@@ -82,7 +82,7 @@
         },
         "53":{
             "date": "2024-09-16",
-            "themeOfTheDay": "Engineers Day",
+            "themeOfTheDay": "Engineer's Day",
             "wordOfTheDay": "Ebullience",
             "tmod": "TM Moun Sando Falin",
             "ge": "TM Ananshi",
@@ -94,7 +94,7 @@
               {
                 "name": "TM Shalom Nishan",
                 "level": "Level 1, Project 1",
-                "evaluator": "TM Authava"
+                "evaluator": "TM Marsha Grasis"
               },
               {
                 "name": "TM Ajisha",
@@ -126,6 +126,33 @@
                 "level": "Level 1, Project 1",
                 "evaluator": "TM Manusha"
               }
+            ],
+            
+            "tt-speakers": [
+                {"name": "TM Jervin Revaldo"},
+                {"name": "TM Suman"},
+                {"name": "TM Authava"},
+                {"name": "TM Ageera"},
+                {"name": "TM Mohammad Ashif"},
+                {"name": "TM Sameera"},
+                {"name": "TM Rosmi"},
+                {"name":"TM Amrutha"},
+                {"name":"TM Rafeena Rose"},
+                {"name": "TM Ashok"},
+                {"name": "TM Ashwin"},
+                {"name": "TM Jeffrin"}
+            ],
+            "rr-speakers": [
+                
+                {"name": "TM Abinesh"},
+                {"name": "TM Sabin"},
+                {"name":"TM Jejashini"},
+                {"name": "TM Ashwathi"},
+                {"name": "TM Ashva Rishenth"},
+                {"name": "Maria Sogini"},
+                {"name": "TM Rancy Maria"},
+                {"name": "TM Sri Venkateshwaran"}
+                
             ]
           }
      
