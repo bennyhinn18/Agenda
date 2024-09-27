@@ -197,8 +197,51 @@
                     {"name":"TM Monika"},
                     {"name":"TM Vishal"}
                 ]
-            }
-        }
+            },
+    "55": {
+        "date": "30-09-2024",
+        "themeOfTheDay": "Embracing Change",
+        "wordOfTheDay": "cogent",
+        "tmod": "TM Tinusha Steni Berg",
+        "ttMaster": "TM Suman",
+        "ge": "TM Sri Venkateshwaran",
+        "ahCounter": "TM Vishal",
+        "timer": "TM Infance Tony",
+        "grammarian": "TM Sriharshini",
+        "speakers": [
+            {"name": "TM Shaniya Jr", "level": "Level 2, Project 1", "evaluator": "TM Marsha Grasis"},
+            {"name": "TM Rosmi", "level": "Level 1, Project 3", "evaluator":"TM Moun Sando Falin" },
+            {"name": "TM Dhibisha", "level": "Level 1, Project 1", "evaluator": "TM Babisha"},
+            {"name": "TM Blessy Jonisha", "level": "Level 1, Project 3", "evaluator": "TM Maxwell Rubert"},
+            {"name": "TM Sameera", "level": "Level 1, Project 4", "evaluator": "TM Mohammad Ashif"},
+
+            {"name": "TM Bijoshini", "level": "Level 1, Project 1", "evaluator": "TM Shaniya Sr"},
+            {"name": "TM Sabin", "level": "Level 2, Project 3", "evaluator": "TM Jejashini"}
+        ],
+        "tt-speakers": [
+            {"name": "TM Amrutha"},
+            {"name": "TM Rancy Maria"},
+            {"name": "TM Ageera"},
+            {"name": "TM Shalom Nishan"},
+            {"name": "TM Tinusha Steni Berg"},
+            {"name": "TM Hamdhan Hussain"},
+            {"name":"TM Suman"},
+            {"name":"TM Ananshi"},{"name":"TM Abin"}
+        ],
+        "rr-speakers": [
+            
+            {"name":"TM Ajisha"},
+            {"name": "TM Jenisha"},
+            {"name":"TM Ashva Rishenth"},
+            {"name": "TM Authava"},
+            {"name": "TM Jervin Revaldo"},
+            {"name": "TM Monika"},
+            {"name": "TM Manusha"},
+            {"name":"TM Ashwathi"}
+        ]
+    }
+}
+
         
      
 
