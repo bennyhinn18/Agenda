@@ -239,10 +239,46 @@
             {"name": "TM Manusha"},
             {"name":"TM Ashwathi"}
         ]
-    }
-}
+    },
 
-        
+    "56": {
+        "date": "09-10-2024",
+        "themeOfTheDay": "Stepping Into the Unknown",
+        "wordOfTheDay": "Liminal",
+        "tmod": "TM Shaniya Jr",
+        "sergeantAtArms": "TM Abinesh",
+        "ttMaster": "TM Manusha",
+        "ge": "TM Authava",
+        "ahCounter": "TM Rosmi",
+        "timer": "TM Marsha Grasis",
+        "grammarian": "TM Blessy Jonisha",
+        "speakers": [
+            {"name": "TM Mohammad Ashif", "level": "Level 2, Project 3", "evaluator": "TM Sameera"},
+            {"name": "TM Vishal", "level": "Level 1, Project 4", "evaluator": "TM Jejashini"},
+            {"name": "TM Babisha", "level": "Level 3, Project 2", "evaluator": "TM Sriharshini"},
+            {"name": "TM Tinusha Steni Berg", "level": "Level 1, Project 3", "evaluator": "TM Shaniya Sr"},
+            {"name": "TM Falin", "level": "Level 2, Project 1", "evaluator": "TM Jervin Revaldo"},
+            {"name": "TM Ajisha", "level": "Level 1, Project 2", "evaluator": "TM Sabin"},
+            {"name": "TM Suman ", "level": "Level 3, Project 3", "evaluator": "TM Ashva Rishenth"}
+        ],
+        "tt-speakers": [
+            {"name": "TM Dhibisha"},
+            {"name": "TM Shalom Nishan"},
+            {"name": "TM Marsha Grasis"},
+            {"name": "TM Ageera"},
+            {"name": "TM Jenisha"},
+            {"name":"TM Jisho"}
+        ],
+        "rr-speakers": [
+            {"name": "TM Rancy Maria"},
+            {"name": "TM Infance Tony"},
+            {"name": "TM Hamdhan Hussain"},
+            {"name": "TM Bennyhinn"},
+            {"name": "TM Amrutha"}
+        ]
+    }
+
      
+    }
 
 }

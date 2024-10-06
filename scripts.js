@@ -1,14 +1,16 @@
 // Function to get the meeting number from the URL
 function getMeetingNumberFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('meeting') || '55'; // Default to meeting 51 if not specified
+    return urlParams.get('meeting') || '56'; // Default to meeting 51 if not specified
 }
 
-const currentMeetingNumber = getMeetingNumberFromURL();
+let currentMeetingNumber;
 
 fetch('meetingData.json')
     .then(response => response.json())
     .then(data => {
+        const meetings = data.meetings;
+        currentMeetingNumber = Math.max(...Object.keys(meetings).map(Number));
         const meetingData = data.meetings[currentMeetingNumber];
 
         if (meetingData) {
