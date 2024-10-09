@@ -19,6 +19,7 @@ fetch('meetingData.json')
             document.getElementById('tmod').textContent = meetingData.tmod;
             document.getElementById('tt-master').textContent = meetingData.ttMaster;
             document.getElementById('ge').textContent = meetingData.ge;
+            document.getElementById('dm').textContent = meetingData.debatemaster;
             document.getElementById('ah-counter').textContent = meetingData.ahCounter;
             document.getElementById('timer').textContent = meetingData.timer;
             document.getElementById('grammarian').textContent = meetingData.grammarian;

@@ -295,6 +295,7 @@
             "ge": "TM Sri Venkateshwaran ",
             "ahCounter": "TM Suman",
             "timer": "TM Vishal",
+            "debatemaster": "TM Babisha",
             "grammarian": "TM Amrutha",
             "speakers": [
                 {"name": "TM Ashva Rishenth", "level": "Level 1, Project 4", "evaluator": "TM Blessy Jonisha"},
@@ -309,8 +310,10 @@
                 {"name": "TM Jejashini"},
                 {"name": "TM Mohammad Ashif"},
                 {"name": "TM Rancy Maria"},
+                {"name":"TM Abin"},
                 {"name": "TM Ajisha"},
-                
+                {"name":"TM Jisho"},
+                {"name":"TM Ashwathi"},
                 {"name": "TM Bennyhinn"},
                 {"name": "TM Manusha"}
             ],
@@ -318,8 +321,10 @@
                 {"name": "TM Infance Tony"},
                 {"name": "TM Dhibisha"},
                 {"name": "TM Jenisha"},
+                {"name":"TM Jenisha"},
+                {"name":"TM Ananshi"},
                 {"name": "TM Shaniya Jr"},
-                {"name": "TM Tinusha Steni Berg"},
+                {"name": "TM Authava"},
                 {"name": "TM Maxwell Rubert"}
             ]
     }
