@@ -44,17 +44,17 @@
             if (meetingData) {
                 const ttSpeakersList = document.getElementById('tt-speakers-list');
                 ttSpeakersList.innerHTML = ''; // Clear any existing content
-                meetingData['tt-speakers'].forEach(speaker => {
+                meetingData['tt-speakers'].forEach((speaker,index) => {
                     const li = document.createElement('li');
-                    li.textContent = speaker.name;
+                    li.textContent = `${index + 1}. ${speaker.name}`;
                     ttSpeakersList.appendChild(li);
                 });
     
-                const rrSpeakersList = document.getElementById('rr-speakers-list');
+                                const rrSpeakersList = document.getElementById('rr-speakers-list');
                 rrSpeakersList.innerHTML = ''; // Clear any existing content
-                meetingData['rr-speakers'].forEach(speaker => {
+                meetingData['rr-speakers'].forEach((speaker, index) => {
                     const li = document.createElement('li');
-                    li.textContent = speaker.name;
+                    li.textContent = `${index + 1}. ${speaker.name}`; // Add a separator and increment index by 1
                     rrSpeakersList.appendChild(li);
                 });
                 const affirmativeSpeakersList = document.getElementById('affirmative-speakers-list');
@@ -65,16 +65,16 @@
                     opposingSpeakersList.innerHTML = '';
 
                     // Populate affirmative speakers
-                    meetingData.debateSpeakers.affirmative.forEach(speaker => {
+                    meetingData.debateSpeakers.affirmative.forEach((speaker,index) => {
                         const li = document.createElement('li');
-                        li.textContent = speaker.name;
+                        li.textContent = `${index + 1}. ${speaker.name}`;
                         affirmativeSpeakersList.appendChild(li);
                     });
 
                     // Populate opposing speakers
-                    meetingData.debateSpeakers.opposing.forEach(speaker => {
+                    meetingData.debateSpeakers.opposing.forEach((speaker,index) => {
                         const li = document.createElement('li');
-                        li.textContent = speaker.name;
+                        li.textContent = `${index + 1}. ${speaker.name}`;
                         opposingSpeakersList.appendChild(li);
                     });
             } else {
