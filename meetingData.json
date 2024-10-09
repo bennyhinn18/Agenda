@@ -283,7 +283,47 @@
 
 
         ]
+    },
+    
+        "57": {
+            "date": "16-10-2024",
+            "themeOfTheDay": "The Power of New Beginnings",
+            "wordOfTheDay": "Initiative",
+            "tmod": "TM Shaniya Sr",
+            "sergeantAtArms": "TM Abinesh",
+            "ttMaster": "TM Marsha Grasis",
+            "ge": "TM Sri Venkateshwaran ",
+            "ahCounter": "TM Suman",
+            "timer": "TM Vishal",
+            "grammarian": "TM Amrutha",
+            "speakers": [
+                {"name": "TM Ashva Rishenth", "level": "Level 1, Project 4", "evaluator": "TM Blessy Jonisha"},
+                {"name": "TM Hamdhan Hussain", "level": "Level 2, Project 2", "evaluator": "TM Rosmi"},
+                {"name": "TM Shalom Nishan", "level": "Level 2, Project 3", "evaluator": "TM Sriharshini"},
+                {"name": "TM Jency", "level": "Level 1, Project 1", "evaluator": "TM Sameera"},
+                {"name": "TM Abhirami", "level": "Level 1, Project 1", "evaluator": "TM Tinusha Steni Berg"},
+                {"name": "TM Sabin", "level": "Level 3, Project 2", "evaluator": "TM Jervin Revaldo"},
+                {"name": "TM Ageera", "level": "Level 1, Project 3", "evaluator": "TM Moun Sando Falin"}
+            ],
+            "tt-speakers": [
+                {"name": "TM Jejashini"},
+                {"name": "TM Mohammad Ashif"},
+                {"name": "TM Rancy Maria"},
+                {"name": "TM Ajisha"},
+                
+                {"name": "TM Bennyhinn"},
+                {"name": "TM Manusha"}
+            ],
+            "rr-speakers": [
+                {"name": "TM Infance Tony"},
+                {"name": "TM Dhibisha"},
+                {"name": "TM Jenisha"},
+                {"name": "TM Shaniya Jr"},
+                {"name": "TM Tinusha Steni Berg"},
+                {"name": "TM Maxwell Rubert"}
+            ]
     }
+    
 
      
     }
