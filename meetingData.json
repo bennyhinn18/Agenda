@@ -285,6 +285,7 @@
         ]
     },
     
+    
         "57": {
             "date": "16-10-2024",
             "themeOfTheDay": "The Power of New Beginnings",
@@ -292,7 +293,7 @@
             "tmod": "TM Shaniya Sr",
             "sergeantAtArms": "TM Abinesh",
             "ttMaster": "TM Marsha Grasis",
-            "ge": "TM Sri Venkateshwaran ",
+            "ge": "TM Sri Venkateshwaran",
             "ahCounter": "TM Suman",
             "timer": "TM Vishal",
             "debatemaster": "TM Babisha",
@@ -310,10 +311,10 @@
                 {"name": "TM Jejashini"},
                 {"name": "TM Mohammad Ashif"},
                 {"name": "TM Rancy Maria"},
-                {"name":"TM Abin"},
+                {"name": "TM Abin"},
                 {"name": "TM Ajisha"},
-                {"name":"TM Jisho"},
-                {"name":"TM Ashwathi"},
+                {"name": "TM Jisho"},
+                {"name": "TM Ashwathi"},
                 {"name": "TM Bennyhinn"},
                 {"name": "TM Manusha"}
             ],
@@ -321,16 +322,33 @@
                 {"name": "TM Infance Tony"},
                 {"name": "TM Dhibisha"},
                 {"name": "TM Jenisha"},
-                {"name":"TM Jenisha"},
-                {"name":"TM Ananshi"},
+                {"name": "TM Ananshi"},
                 {"name": "TM Shaniya Jr"},
                 {"name": "TM Authava"},
                 {"name": "TM Maxwell Rubert"}
-            ]
+            ],
+            "debateSpeakers": {
+                "affirmative": [
+                    {"name": "TM Vishal"},
+                    {"name": "TM Tinusha Steni Berg"},
+                    {"name": "TM Sameera"},
+                    {"name": "TM Rosmi"},
+                    {"name": "TM Amrutha"}
+                ],
+                "opposing": [
+                    {"name": "TM Sriharshini"},
+                    {"name": "TM Moun Sando Falin"},
+                    {"name": "TM Blessy Jonisha"},
+                    {"name": "TM Jervin Revaldo"},
+                    {"name": "TM Suman"}
+                ]
+            }
+        }
     }
+    
     
 
      
-    }
+    
 
 }

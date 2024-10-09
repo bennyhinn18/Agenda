@@ -7,7 +7,14 @@
     <h3>Round Robin Speakers</h3>
     <ul id="rr-speakers-list"></ul>
 </section>
-
+<section class="debate-speakers"></section>
+<h2>        Debate Speakers             </h2>
+    <h4>Affirmative Speakers</h4>
+    <ul id="affirmative-speakers-list"></ul>
+    
+    <h4>Opposing Speakers</h4>
+    <ul id="opposing-speakers-list"></ul>
+</section>
 <script>
         // Function to get the meeting number from the URL
     function getMeetingNumberFromURL() {
@@ -38,6 +45,26 @@
                     li.textContent = speaker.name;
                     rrSpeakersList.appendChild(li);
                 });
+                const affirmativeSpeakersList = document.getElementById('affirmative-speakers-list');
+                    const opposingSpeakersList = document.getElementById('opposing-speakers-list');
+
+                    // Clear any existing content
+                    affirmativeSpeakersList.innerHTML = '';
+                    opposingSpeakersList.innerHTML = '';
+
+                    // Populate affirmative speakers
+                    meetingData.debateSpeakers.affirmative.forEach(speaker => {
+                        const li = document.createElement('li');
+                        li.textContent = speaker.name;
+                        affirmativeSpeakersList.appendChild(li);
+                    });
+
+                    // Populate opposing speakers
+                    meetingData.debateSpeakers.opposing.forEach(speaker => {
+                        const li = document.createElement('li');
+                        li.textContent = speaker.name;
+                        opposingSpeakersList.appendChild(li);
+                    });
             } else {
                 console.error('Meeting data not found for meeting number:', currentMeetingNumber);
             }

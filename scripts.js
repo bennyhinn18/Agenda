@@ -12,7 +12,7 @@ fetch('meetingData.json')
         const meetings = data.meetings;
         currentMeetingNumber = Math.max(...Object.keys(meetings).map(Number));
         const meetingData = data.meetings[currentMeetingNumber];
-
+        
         if (meetingData) {
             document.getElementById('theme-of-the-day').textContent = meetingData.themeOfTheDay;
             document.getElementById('word-of-the-day').textContent = meetingData.wordOfTheDay;
@@ -34,21 +34,7 @@ fetch('meetingData.json')
                 speakersList.appendChild(li);
             });
 
-            const ttSpeakersList = document.getElementById('tt-speakers-list');
-            ttSpeakersList.innerHTML = ''; // Clear any existing content
-            meetingData['tt-speakers'].forEach(speaker => {
-                const li = document.createElement('li');
-                li.textContent = speaker.name;
-                ttSpeakersList.appendChild(li);
-            });
-
-            const rrSpeakersList = document.getElementById('rr-speakers-list');
-            rrSpeakersList.innerHTML = ''; // Clear any existing content
-            meetingData['rr-speakers'].forEach(speaker => {
-                const li = document.createElement('li');
-                li.textContent = speaker.name;
-                rrSpeakersList.appendChild(li);
-            });
+            
         } else {
             console.error('Meeting data not found for meeting number:', currentMeetingNumber);
         }
