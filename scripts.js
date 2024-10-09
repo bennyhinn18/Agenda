@@ -4,15 +4,16 @@ function getMeetingNumberFromURL() {
     return urlParams.get('meeting') || '57'; // Default to meeting 51 if not specified
 }
 
-let currentMeetingNumber;
+
 
 fetch('meetingData.json')
     .then(response => response.json())
     .then(data => {
         const meetings = data.meetings;
-        currentMeetingNumber = Math.max(...Object.keys(meetings).map(Number));
+        const currentMeetingNumber = Math.max(...Object.keys(meetings).map(Number));
         const meetingData = data.meetings[currentMeetingNumber];
-        
+        const pageTitle = document.getElementById('page-title');
+                pageTitle.textContent = `Stella Mary's Toastmasters Agenda For Meeting No ${currentMeetingNumber}`;
         if (meetingData) {
             document.getElementById('theme-of-the-day').textContent = meetingData.themeOfTheDay;
             document.getElementById('word-of-the-day').textContent = meetingData.wordOfTheDay;

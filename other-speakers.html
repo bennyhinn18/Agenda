@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Other Speakers List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.toastmasters.org/content/images/globals/toastmasters-logo@2x.png" type="image/x-icon">
+</head>
+<body>
+    
 
 <section class="tt-speakers">
     <h3>Table Topics Speakers</h3>
@@ -28,7 +39,8 @@
         .then(response => response.json())
         .then(data => {
             const meetingData = data.meetings[currentMeetingNumber];
-    
+            const pageTitle = document.getElementById('page-title');
+                pageTitle.textContent = `Other Speakers List For Meeting No ${currentMeetingNumber}`;
             if (meetingData) {
                 const ttSpeakersList = document.getElementById('tt-speakers-list');
                 ttSpeakersList.innerHTML = ''; // Clear any existing content
@@ -71,3 +83,4 @@
         })
         .catch(error => console.error('Error fetching data:', error));
 </script>
+</body>
